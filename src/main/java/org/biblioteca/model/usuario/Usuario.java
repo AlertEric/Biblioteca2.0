@@ -1,10 +1,12 @@
 package org.biblioteca.model.usuario;
-import  org.biblioteca.model.usuario.TipoUsuario;
+
+import lombok.Getter;
+import lombok.Setter;
+import org.biblioteca.model.enums.TipoUsuario;
 import java.time.LocalDate;
 
-
-public class
-Usuarios {
+@Getter @Setter
+public class Usuario {
 
     private int idUsuario;
     private String nomeUsuario;
@@ -13,17 +15,17 @@ Usuarios {
     private String logUsuario;
     private String senha;
     private TipoUsuario tipoUsuario;
+    private LocalDate cadastroData;
 
-
-    public Usuarios(int idUsuario, String senha, String logUsuario, LocalDate dataNacimento, String nomeUsuario, String cpf, String cargo, TipoUsuario tipoUsuario) {
+    public Usuario(int idUsuario, String senha, String logUsuario, LocalDate dataNacimento, String nomeUsuario, String cpf, LocalDate cadastroData) {
         this.idUsuario = idUsuario;
         this.senha = senha;
         this.logUsuario = logUsuario;
         this.dataNacimento = dataNacimento;
         this.nomeUsuario = nomeUsuario;
         this.cpf = cpf;
-        this.tipoUsuario = tipoUsuario;
-    }
+        this.cadastroData = cadastroData;
+            }
 
     public TipoUsuario getTipoUsuario() {
         return tipoUsuario;
