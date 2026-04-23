@@ -1,8 +1,8 @@
-package org.biblioteca.model.usuario;
+package com.biblioteca.model.usuario;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.biblioteca.model.enums.TipoUsuario;
+import com.biblioteca.model.enums.TipoUsuario;
 import java.time.LocalDate;
 
 @Getter @Setter

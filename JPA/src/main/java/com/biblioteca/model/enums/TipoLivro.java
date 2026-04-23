@@ -1,4 +1,4 @@
-package org.biblioteca.model.enums;
+package com.biblioteca.model.enums;
 
 public enum TipoLivro {
 GENEROS_FICCAO_ROMANCE("Romance"),

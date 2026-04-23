@@ -1,8 +1,8 @@
-package org.biblioteca.model.livro;
+package com.biblioteca.model.livro;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.biblioteca.model.enums.TipoLivro;
+import com.biblioteca.model.enums.TipoLivro;
 
 import java.time.LocalDate;
 
