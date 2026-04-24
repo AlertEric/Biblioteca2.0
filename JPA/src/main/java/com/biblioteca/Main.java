@@ -1,21 +1,30 @@
 package com.biblioteca;
 
 import com.biblioteca.controller.cases.CaseMenu;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-@SpringBootApplication
+
+
+@SpringBootApplication(scanBasePackages = "com.biblioteca")
 public class Main {
+
+    private static final Logger log = LoggerFactory.getLogger(Main.class);
+
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
 
-        Runnable runnable = new Runnable() {
-            public void run() {
-                CaseMenu caseMenu = new CaseMenu();
-            }
-        };
-    runnable.run();
     }
+        @Bean
+        public CommandLineRunner run (CaseMenu caseMenu){
+            return arg->{
+                log.info("\uD83D\uDD25 ESTOU RODANDO AQUI \uD83D\uDD25");
+                caseMenu
+            }
+        }
+
 }
