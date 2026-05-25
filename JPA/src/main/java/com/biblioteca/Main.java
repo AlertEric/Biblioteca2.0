@@ -8,8 +8,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-
-
 @SpringBootApplication(scanBasePackages = "com.biblioteca")
 public class Main {
 
@@ -23,8 +21,7 @@ public class Main {
         public CommandLineRunner run (CaseMenu caseMenu){
             return arg->{
                 log.info("\uD83D\uDD25 ESTOU RODANDO AQUI \uD83D\uDD25");
-                caseMenu
-            }
+                caseMenu.CaseMenusAcesso();
+            };
         }
-
 }

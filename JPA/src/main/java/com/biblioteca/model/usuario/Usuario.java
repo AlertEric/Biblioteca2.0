@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import com.biblioteca.model.enums.TipoUsuario;
+import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -11,6 +12,7 @@ import java.time.LocalDate;
 @Entity
 @Table(name ="TB_Usuarios")
 @Getter @Setter
+@Component
 public class Usuario implements Serializable {
     private static final long serialVersionUID=1;
 
@@ -48,6 +50,9 @@ public class Usuario implements Serializable {
         this.cpf = cpf;
         this.cadastroData = cadastroData;
             }
+
+    public Usuario() {
+    }
 
     public TipoUsuario getTipoUsuario() {
         return tipoUsuario;

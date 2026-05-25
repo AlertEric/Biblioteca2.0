@@ -36,6 +36,10 @@ public class Livro implements Serializable {
     @Column(nullable = false)
     private int quantidade;
 
+    @ManyToOne
+    @JoinColumn(name ="id_Editota")
+    private Editora editora;
+
     public Livro(UUID id_livro, int quantidade,LocalDate dataCadastro, LocalDate dataLancamento, String nomeDoLivro) {
         this.id_livro = id_livro;
         this.quantidade = quantidade;
@@ -82,5 +86,13 @@ public class Livro implements Serializable {
 
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
+    }
+
+    public Editora getEditora() {
+        return editora;
+    }
+
+    public void setEditora(Editora editora) {
+        this.editora = editora;
     }
 }
