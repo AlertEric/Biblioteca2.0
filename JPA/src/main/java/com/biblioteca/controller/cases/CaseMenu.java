@@ -17,8 +17,8 @@ public class CaseMenu {
     public static final Logger LOGGER = LoggerFactory.getLogger(CaseMenu.class);
 
 
-    private void cadastroUser(Cadastro cad) {
-    cad.cadastroUsuario();
+    private void cadastroUser() {
+    Cadastro.cadastroUsuario();
     }
 
     private void acessoUsuario () {
