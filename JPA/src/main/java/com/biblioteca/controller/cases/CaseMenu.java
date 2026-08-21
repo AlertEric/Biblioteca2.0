@@ -1,7 +1,6 @@
 package com.biblioteca.controller.cases;
 
 
-import com.biblioteca.model.usuario.Usuario;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -17,9 +16,7 @@ public class CaseMenu {
     public static final Logger LOGGER = LoggerFactory.getLogger(CaseMenu.class);
 
 
-    private void cadastroUser() {
-    Cadastro.cadastroUsuario();
-    }
+    private void cadastroUser() { Cadastro.cadastroUsuario(); }
 
     private void acessoUsuario () {
         Login.loginUsuario();
