@@ -6,14 +6,15 @@ import lombok.Getter;
 @Getter
 public enum TipoUsuario {
         ALUNO (1),
-        FUNCIONARIO(2);
+        FUNCIONARIO(2),
+        ADMINISTRATIVO_SISTEMA( 3);
 
         private int codigo;
 
 
     TipoUsuario(int codigo) {
-            this.codigo = codigo;
 
+        this.codigo = codigo;
     }
 
 }

@@ -1,13 +1,11 @@
 package com.biblioteca.controller.cases;
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import java.util.Scanner;
 import com.biblioteca.controller.cadlogin.*;
 import static java.lang.System.exit;
-
 
 @Component
 public class CaseMenu {
@@ -21,7 +19,6 @@ public class CaseMenu {
     private void acessoUsuario () {
         Login.loginUsuario();
     }
-
 
     public void CaseMenusAcesso() {
 

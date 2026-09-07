@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import com.biblioteca.model.enums.TipoUsuario;
+import org.hibernate.mapping.Set;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -14,7 +15,7 @@ import java.time.LocalDate;
 public class Usuario implements Serializable {
     private static final long serialVersionUID=1;
 
-    public Usuario(int idUsuario, String senha, String logUsuario, LocalDate dataNacimento, String nomeUsuario, String cpf, LocalDate cadastroData) {
+    public Usuario(int idUsuario, String senha, String logUsuario, LocalDate dataNacimento, String nomeUsuario, String cpf, LocalDate cadastroData, int tipoUsuario ) {
         this.idUsuario = idUsuario;
         this.senha = senha;
         this.logUsuario = logUsuario;
@@ -22,6 +23,7 @@ public class Usuario implements Serializable {
         this.nomeUsuario = nomeUsuario;
         this.cpf = cpf;
         this.cadastroData = cadastroData;
+        this.tipoUsuario = Enum_TipoUsuario.getCodigo();
     }
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -43,10 +45,17 @@ public class Usuario implements Serializable {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, unique = true)
-    private TipoUsuario tipoUsuario;
+    private  int tipoUsuario;
+    private TipoUsuario Enum_TipoUsuario;
+
+
 
     @Column(nullable = false, unique = false)
     private LocalDate cadastroData;
+
+    public Usuario() {
+
+    }
 }
 
 

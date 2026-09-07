@@ -4,21 +4,21 @@ package com.biblioteca.controller.cadlogin;
 import com.biblioteca.model.usuario.Usuario;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 import java.util.Scanner;
 
-
+@Component
 public final class Cadastro {
 
-    private static Usuario usuario;
 
     public static void  cadastroUsuario() {
 
-
         Scanner scanner = new Scanner(System.in);
         final Logger LOGGER = LoggerFactory.getLogger(Cadastro.class);
+
+        Usuario usuario = new Usuario();
 
         LOGGER.info("DIGITE SEU NOME");
         usuario.setNomeUsuario(scanner.nextLine());
@@ -36,9 +36,6 @@ public final class Cadastro {
         LOGGER.info("senha deve conter (letra, numeros e simbolos)");
         usuario.setSenha(scanner.next());
 
-
     }
-
-
 
 }
