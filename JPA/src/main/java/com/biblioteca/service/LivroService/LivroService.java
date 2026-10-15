@@ -1,4 +1,9 @@
 package com.biblioteca.service.LivroService;
 
-public class LivroService {
+
+import org.springframework.stereotype.Service;
+
+@Service
+public final class LivroService {
+
 }
