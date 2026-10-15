@@ -4,13 +4,14 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import com.biblioteca.model.enums.TipoUsuario;
-
 import java.io.Serializable;
 import java.time.LocalDate;
+import org.springframework.data.annotation.AccessType;
 
 @Entity
 @Table(name ="TB_Usuarios")
 @Getter @Setter
+
 public class Usuario implements Serializable {
     private static final long serialVersionUID=1;
 

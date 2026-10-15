@@ -9,6 +9,7 @@ import java.util.Scanner;
 @Component
 public class Login {
 
+
     private static Usuario usuario;
     public static void loginUsuario(){
         Scanner scanner= new Scanner(System.in);
@@ -20,7 +21,6 @@ public class Login {
         LOGGER.info("Digite sua senha");
         usuario.setSenha(scanner.nextLine());
 
-    // BATER DADOS COM USUARIO CADEASTRADO NO BANCO E  EXECUTAR LOGIN   BATENDO COM O TIPO DO USUARIO
 
     }
     
