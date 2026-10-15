@@ -48,51 +48,5 @@ public class Livro implements Serializable {
         this.nomeDoLivro = nomeDoLivro;
     }
 
-    public String getNomeDoLivro() {
-        return nomeDoLivro;
-    }
 
-    public void setNomeDoLivro(String nomeDoLivro) {
-        this.nomeDoLivro = nomeDoLivro;
-    }
-
-    public LocalDate getDataLancamento() {
-        return dataLancamento;
-    }
-
-    public void setDataLancamento(LocalDate dataLancamento) {
-        this.dataLancamento = dataLancamento;
-    }
-
-    public LocalDate getDataCadastro() {
-        return dataCadastro;
-    }
-
-    public void setDataCadastro(LocalDate dataCadastro) {
-        this.dataCadastro = dataCadastro;
-    }
-
-    public TipoLivro getGenero() {
-        return genero;
-    }
-
-    public void setGenero(TipoLivro genero) {
-        this.genero = genero;
-    }
-
-    public int getQuantidade() {
-        return quantidade;
-    }
-
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
-
-    public Editora getEditora() {
-        return editora;
-    }
-
-    public void setEditora(Editora editora) {
-        this.editora = editora;
-    }
 }

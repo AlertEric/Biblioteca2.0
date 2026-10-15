@@ -4,10 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import com.biblioteca.model.enums.TipoUsuario;
-import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
-import java.text.Format;
 import java.time.LocalDate;
 
 @Entity
@@ -16,6 +14,15 @@ import java.time.LocalDate;
 public class Usuario implements Serializable {
     private static final long serialVersionUID=1;
 
+    public Usuario(int idUsuario, String senha, String logUsuario, LocalDate dataNacimento, String nomeUsuario, String cpf, LocalDate cadastroData) {
+        this.idUsuario = idUsuario;
+        this.senha = senha;
+        this.logUsuario = logUsuario;
+        this.dataNacimento = dataNacimento;
+        this.nomeUsuario = nomeUsuario;
+        this.cpf = cpf;
+        this.cadastroData = cadastroData;
+    }
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int idUsuario;
@@ -40,17 +47,6 @@ public class Usuario implements Serializable {
 
     @Column(nullable = false, unique = false)
     private LocalDate cadastroData;
-
-    public Usuario(int idUsuario, String senha, String logUsuario, LocalDate dataNacimento, String nomeUsuario, String cpf, LocalDate cadastroData) {
-        this.idUsuario = idUsuario;
-        this.senha = senha;
-        this.logUsuario = logUsuario;
-        this.dataNacimento = dataNacimento;
-        this.nomeUsuario = nomeUsuario;
-        this.cpf = cpf;
-        this.cadastroData = cadastroData;
-    }
-
 }
 
 

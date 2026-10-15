@@ -16,11 +16,12 @@ public final class Cadastro {
 
     public static void  cadastroUsuario() {
 
+
         Scanner scanner = new Scanner(System.in);
         final Logger LOGGER = LoggerFactory.getLogger(Cadastro.class);
 
         LOGGER.info("DIGITE SEU NOME");
-        usuario.setNomeUsuario(scanner.next());
+        usuario.setNomeUsuario(scanner.nextLine());
 
         LOGGER.info("DIGITE SEU CPF");
         usuario.setCpf(scanner.next());
