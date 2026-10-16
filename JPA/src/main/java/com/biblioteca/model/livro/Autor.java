@@ -13,7 +13,7 @@ import java.util.UUID;
 @Setter @Getter
 @Entity
 @Table(name = "TB_AUTOR" )
-public class Autor implements Serializable {
+public class Autor  implements Serializable {
     private static final long serialVersionUID =1L;
 
     @Id@GeneratedValue(strategy = GenerationType.AUTO)
