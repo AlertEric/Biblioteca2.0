@@ -1,24 +1,24 @@
 package com.biblioteca.controller.cadlogin;
 
 
-import com.biblioteca.model.usuario.Usuario;
+import com.biblioteca.model.usuario.Usuarios;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-
+import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.util.Scanner;
 
+@Service
+public final class CadController {
+    public CadController() {}
 
-public final class Cadastro {
+    private static Usuarios usuario;
 
-    private static Usuario usuario;
-
-    public static void  cadastroUsuario() {
+    public  void  cadastroUsuario() {
 
 
         Scanner scanner = new Scanner(System.in);
-        final Logger LOGGER = LoggerFactory.getLogger(Cadastro.class);
+        final Logger LOGGER = LoggerFactory.getLogger(CadController.class);
 
         LOGGER.info("DIGITE SEU NOME");
         usuario.setNomeUsuario(scanner.nextLine());

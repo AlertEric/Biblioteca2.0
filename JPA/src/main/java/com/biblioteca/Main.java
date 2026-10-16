@@ -1,6 +1,6 @@
 package com.biblioteca;
 
-import com.biblioteca.controller.cases.CaseMenu;
+import com.biblioteca.controller.casesMenus.CaseMenu;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
