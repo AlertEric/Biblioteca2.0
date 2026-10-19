@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import com.biblioteca.model.enums.TipoLivro;
+import org.springframework.stereotype.Service;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -12,7 +13,7 @@ import java.util.UUID;
 @Entity
 @Table(name ="TB_LIVRO")
 @Getter @Setter
-
+@Service
 public class Livro implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -40,13 +41,13 @@ public class Livro implements Serializable {
     @JoinColumn(name ="id_Editota")
     private Editora editora;
 
-    public Livro(UUID id_livro, int quantidade,LocalDate dataCadastro, LocalDate dataLancamento, String nomeDoLivro) {
+    public Livro(UUID id_livro, Editora editora, TipoLivro genero, LocalDate dataLancamento, String nomeDoLivro, LocalDate dataCadastro, int quantidade) {
         this.id_livro = id_livro;
-        this.quantidade = quantidade;
-        this.dataCadastro = dataCadastro;
+        this.editora = editora;
+        this.genero = genero;
         this.dataLancamento = dataLancamento;
         this.nomeDoLivro = nomeDoLivro;
+        this.dataCadastro = dataCadastro;
+        this.quantidade = quantidade;
     }
-
-
 }
