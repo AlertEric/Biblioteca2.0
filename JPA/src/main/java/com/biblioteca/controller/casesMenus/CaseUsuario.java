@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.biblioteca.controller.casesBiblioteca.usuarioCliente.*;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RestController;
 
 
 import java.util.Scanner;
@@ -13,18 +14,11 @@ import static java.lang.System.exit;
 
 
 
-@Service
+@RestController
 public class CaseUsuario {
 
-    Scanner scanner = new Scanner(System.in);
     public static final Logger LOGGERs = LoggerFactory.getLogger(CaseUsuario.class);
 
-    private final LivroService livroService;
-
-    @Override
-    public CaseUsuario(LivroService solicitacaoLivro){
-        livroService = solicitacaoLivro;
-    }
 
     public void caseMenuUsuario() {
 

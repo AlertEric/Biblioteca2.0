@@ -5,9 +5,11 @@ import org.slf4j.LoggerFactory;
 import java.util.Scanner;
 import com.biblioteca.controller.cadlogin.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
 import static java.lang.System.exit;
 
-
+@RestController
 public class CaseMenu  {
 
     Scanner scanner = new Scanner(System.in);

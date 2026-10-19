@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="index.html"></script>
+<form action="/cadastro.html" id="form" method="post" href="css/cadastro.css">
+
+
+    <label for="nome">
+    <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+    </label>
+    <label for="sobrenome">
+    <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome" required>
+    </label>
+    <label for="CPF">
+        <input type="text" name="CPF" id="CPF" placeholder="Digite seu CPF" required>
+    </label>
+    <label for = "datanascimento">
+        <input type="date" name="datanascimento" placeholder=" Data de nacimento (00/00/0000)" id="datanascimento" required >
+    </label>
+    <label for="email">
+    <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+    </label>
+    <label for="validacaoemail">
+    <input type="email" name="validacaoemail" id="validacaoemail" placeholder="Valide seu Email" required>
+       </label>
+    <label for="senha">
+        <input type="password" name="senha" id="senha" placeholder="Digite sua senha"  required>
+    </label>
+    <label for="confirmarsenha">
+        <input type="password" name="confirmarsenha" id="confirmarsenha" placeholder="Confirme sua senha" required>
+    </label>
+
+    <link rel="stylesheet" >
+    <a href="js/cadastro.js" id="login"  type="submit" name="Login" >Acessar</a>
+    
+
+
+
+    <script src="js/cadastro.js"  >
+
+        addEventListener("submit", Cadastro)
+
+    </script>
+
+</form>
+</body>
+</html>

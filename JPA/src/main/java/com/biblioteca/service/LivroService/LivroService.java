@@ -22,14 +22,7 @@ public final class LivroService   {
 
     public void livroEmprestimo()  {
 
-
-    querysLivros.QUERY_LISTAR_LIVRO();
-
-    menuEmprestimo.solicitacaoDeEmprestimo();
-
-
-
-    }
+            }
 
 
 

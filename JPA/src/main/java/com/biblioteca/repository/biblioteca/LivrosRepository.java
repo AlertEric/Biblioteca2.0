@@ -8,11 +8,14 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public  interface LivrosRepository extends JpaRepository<> {
+public  interface LivrosRepository extends JpaRepository<Livro, Integer> {
 
 
-    @Query(" SELECT alias FROM Livro alias ")
-    List<Livro> QUERY_LISTAR_LIVRO();
+    @Override
+    List<Livro> findAll();
+
+    @Query(" SELECT alias FROM Livro alias where genere = :genero ")
+    List<Livro> QUERY_LISTAR_LIVRO_POR_GENERO();
 
 
 

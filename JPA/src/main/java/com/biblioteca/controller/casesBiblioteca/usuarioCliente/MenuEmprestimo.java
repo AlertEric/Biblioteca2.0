@@ -3,10 +3,11 @@ package com.biblioteca.controller.casesBiblioteca.usuarioCliente;
 import com.biblioteca.model.livro.Livro;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Scanner;
 
-
+@RestController
 public class MenuEmprestimo  {
 
     public final Livro dadosLivro;

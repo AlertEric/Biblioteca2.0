@@ -5,10 +5,12 @@ import com.biblioteca.model.usuario.Usuarios;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RestController;
+
 import java.time.LocalDate;
 import java.util.Scanner;
 
-@Service
+@RestController
 public final class CadController {
     public CadController() {}
 
@@ -28,9 +30,6 @@ public final class CadController {
 
         LOGGER.info("DIGITE SUA DATA DE NASCIMENTO");
         usuario.setDataNacimento(LocalDate.parse(scanner.next()));
-
-        LOGGER.info("DIGITE SEU LOGIN DE ACESSO");
-        usuario.setLogUsuario(scanner.next());
 
         LOGGER.info("DIGITE SUA SENHA DE ACESSO");
         LOGGER.info("senha deve conter (letra, numeros e simbolos)");
