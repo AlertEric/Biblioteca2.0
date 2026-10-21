@@ -25,24 +25,17 @@ public class Editora implements Serializable {
     private String nomeEditora;
 
     @Column (nullable = false, unique = false)
-    private LocalDate dataLaçamento;
+    private LocalDate dataPublicacao;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @OneToMany(mappedBy = "editora", fetch = FetchType.LAZY)
     private Set<Livro> livros = new HashSet<>();
 
 
-    public Editora(UUID id_Editota, String nomeEditora, LocalDate dataLaçamento) {
+    public Editora(UUID id_Editota, String nomeEditora, LocalDate dataPublicacao) {
         this.id_Editota = id_Editota;
         this.nomeEditora = nomeEditora;
-        this.dataLaçamento = dataLaçamento;
+        this.dataPublicacao = dataPublicacao;
     }
 
-    public Set<Livro> getLivros() {
-        return livros;
-    }
-
-    public void setLivros(Set<Livro> livros) {
-        this.livros = livros;
-    }
 }

@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="DB_Biblioteca" uuid="88a443f3-d135-4a5b-9463-c5809d4fd9f9">
+    <data-source source="LOCAL" name="defaultdb  " uuid="1b227477-2b4b-4c3d-af89-55b7f5d8a1e0">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <configured-by-url>true</configured-by-url>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/DB_Biblioteca</jdbc-url>
-      <jdbc-additional-properties>
-        <property name="com.intellij.clouds.kubernetes.db.host.port" />
-        <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
-        <property name="com.intellij.clouds.kubernetes.db.container.port" />
-      </jdbc-additional-properties>
+      <jdbc-url>jdbc:mysql://biblioteca-mysql-eric-c1e8.f.aivencloud.com:20826</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
+      <time-zone>sfo</time-zone>
     </data-source>
   </component>
 </project>
