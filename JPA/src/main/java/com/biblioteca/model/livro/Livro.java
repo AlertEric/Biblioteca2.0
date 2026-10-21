@@ -6,6 +6,7 @@ import lombok.Setter;
 import com.biblioteca.model.enums.TipoLivro;
 import org.springframework.stereotype.Service;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.UUID;
@@ -16,6 +17,7 @@ import java.util.UUID;
 @Service
 public class Livro implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

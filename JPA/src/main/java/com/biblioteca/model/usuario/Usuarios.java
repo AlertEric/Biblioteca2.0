@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import com.biblioteca.model.enums.TipoUsuario;
+
+import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -12,6 +14,7 @@ import java.time.LocalDate;
 @Getter @Setter
 
 public class Usuarios implements Serializable {
+    @Serial
     private static final long serialVersionUID=1;
 
     public Usuarios(int idUsuario, String senha, LocalDate dataNacimento, String nomeUsuario, String cpf, LocalDate cadastroData) {

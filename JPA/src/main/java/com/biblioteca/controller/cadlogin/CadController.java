@@ -5,11 +5,11 @@ import com.biblioteca.model.usuario.Usuarios;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDate;
 import java.util.Scanner;
-
 @RestController
 public final class CadController {
     public CadController() {}
@@ -22,6 +22,8 @@ public final class CadController {
         Scanner scanner = new Scanner(System.in);
         final Logger LOGGER = LoggerFactory.getLogger(CadController.class);
 
+
+        @RequestBody
         LOGGER.info("DIGITE SEU NOME");
         usuario.setNomeUsuario(scanner.nextLine());
 

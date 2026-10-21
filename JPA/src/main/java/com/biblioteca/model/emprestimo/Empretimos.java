@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.rmi.server.UID;
 import java.time.LocalDate;
@@ -13,7 +14,8 @@ import java.time.LocalDate;
 @Getter @Setter
 public class Empretimos implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    @Serial
+    private static final long serialVersionUID = 1;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UID id_Emprestimo;
