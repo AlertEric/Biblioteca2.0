@@ -1,0 +1,6 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="biblioteca" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" editBeforeRun="true" port="8080">
+    <mapping url="http://localhost:8080" local-file="$PROJECT_DIR$/JPA/src/main/resources/static/index.html" />
+    <method v="2" />
+  </configuration>
+</component>
