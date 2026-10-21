@@ -14,10 +14,9 @@ import java.time.LocalDate;
 public class Usuarios implements Serializable {
     private static final long serialVersionUID=1;
 
-    public Usuarios(int idUsuario, String senha, String logUsuario, LocalDate dataNacimento, String nomeUsuario, String cpf, LocalDate cadastroData) {
+    public Usuarios(int idUsuario, String senha, LocalDate dataNacimento, String nomeUsuario, String cpf, LocalDate cadastroData) {
         this.idUsuario = idUsuario;
         this.senha = senha;
-        this.logUsuario = logUsuario;
         this.dataNacimento = dataNacimento;
         this.nomeUsuario = nomeUsuario;
         this.cpf = cpf;
@@ -35,8 +34,6 @@ public class Usuarios implements Serializable {
 
     @Column(nullable = false, unique = false)
     protected LocalDate dataNacimento;
-    @Column(nullable = false, unique = true)
-    protected String logUsuario;
 
     @Column(nullable = false, unique = false)
     protected String senha;
