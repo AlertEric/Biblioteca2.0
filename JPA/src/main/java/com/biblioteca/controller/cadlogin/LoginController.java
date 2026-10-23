@@ -11,16 +11,16 @@ public class LoginController {
     public LoginController() {
     }
 
-    private static Usuarios usuario;
+     Usuarios usuario;
     public void loginUsuario(){
         Scanner scanner= new Scanner(System.in);
         final Logger LOGGER =LoggerFactory.getLogger(LoginController.class);
 
         LOGGER.info("Digite seu Login");
-        usuario.setLogUsuario(scanner.nextLine());
+
 
         LOGGER.info("Digite sua senha");
-        usuario.setSenha(scanner.nextLine());
+
 
 
     }

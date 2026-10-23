@@ -1,5 +1,6 @@
 package com.biblioteca.model.usuario;
 
+
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,6 +9,7 @@ import com.biblioteca.model.enums.TipoUsuario;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Objects;
 
 @Entity
 @Table(name ="TB_Usuarios")
@@ -17,36 +19,55 @@ public class Usuarios implements Serializable {
     @Serial
     private static final long serialVersionUID=1;
 
-    public Usuarios(int idUsuario, String senha, LocalDate dataNacimento, String nomeUsuario, String cpf, LocalDate cadastroData) {
+    public Usuarios(int idUsuario, String senha,String sobrenome ,LocalDate dataNacimento, String nomeUsuario, String cpf, String email, String validaEmail, String validaSenha) {
         this.idUsuario = idUsuario;
         this.senha = senha;
         this.dataNacimento = dataNacimento;
         this.nomeUsuario = nomeUsuario;
         this.cpf = cpf;
-        this.cadastroData = cadastroData;
+        this.sobrenome = sobrenome;
+        this.email = email;
+        this.validaEmail = validaEmail;
+       this.validasenha  = validaSenha;
+
     }
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected int idUsuario;
+    private int idUsuario;
 
     @Column(nullable = false, unique = true)
-    protected String nomeUsuario;
+    private String nomeUsuario;
 
     @Column(nullable = false, unique = true)
-    protected String cpf;
+    private String cpf;
 
     @Column(nullable = false, unique = false)
-    protected LocalDate dataNacimento;
+    private LocalDate dataNacimento;
+
 
     @Column(nullable = false, unique = false)
-    protected String senha;
+    private String senha;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, unique = true)
-    protected TipoUsuario tipoUsuario;
+    private TipoUsuario tipoUsuario;
 
     @Column(nullable = false, unique = false)
-    protected LocalDate cadastroData;
+    private String sobrenome;
+
+    @Column(nullable = false, unique= true)
+    private  String email;
+
+
+
+    private  String validaEmail;
+
+    private  String validasenha;
+
+
+    public Usuarios() {
+
+    }
 }
 
 

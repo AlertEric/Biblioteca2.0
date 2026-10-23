@@ -1,11 +1,14 @@
 package com.biblioteca.controller.casesMenus;
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.Scanner;
 import com.biblioteca.controller.cadlogin.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.swing.*;
 
 import static java.lang.System.exit;
 
@@ -46,14 +49,14 @@ public class CaseMenu  {
                         break;
 
                     case 2:
-                        cadControllerUsurious.cadastroUsuario();
+
 
                         break;
 
                     case 3:
                         exit(0);
                     default:
-                        LOGGER.info("Opção inválida, digite novamente");
+                        LOGGER.info();
                 }
 
             }

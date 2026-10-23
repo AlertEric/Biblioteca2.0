@@ -1,8 +1,8 @@
 package com.biblioteca.service.UsuarioService;
 
+import com.biblioteca.model.usuario.Usuarios;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 
 
 @Service
