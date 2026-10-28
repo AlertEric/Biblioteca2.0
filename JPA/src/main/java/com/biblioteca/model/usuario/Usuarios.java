@@ -1,15 +1,13 @@
 package com.biblioteca.model.usuario;
 
-
+import com.biblioteca.service.UsuarioService.cadastroService;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import com.biblioteca.model.enums.TipoUsuario;
-
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Objects;
 
 @Entity
 @Table(name ="TB_Usuarios")
@@ -47,6 +45,7 @@ public class Usuarios implements Serializable {
 
     @Column(nullable = false, unique = false)
     private String senha;
+
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, unique = true)
