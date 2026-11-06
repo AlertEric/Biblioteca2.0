@@ -12,7 +12,6 @@ import java.time.LocalDate;
 @Setter
 public class CadastroRequest {
 
-
     private String nome;
     private String sobrenome;
     private String cpf;
@@ -21,5 +20,6 @@ public class CadastroRequest {
     private String validaEmail;
     private String senha;
     private String validaSenha;
+
 
 }

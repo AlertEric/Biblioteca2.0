@@ -1,6 +1,5 @@
 package com.biblioteca.model.usuario;
 
-import com.biblioteca.service.UsuarioService.cadastroService;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
